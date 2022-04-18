@@ -1,0 +1,53 @@
+<view class="cu-list menu">
+  <view class="cu-item">
+    <view class="content">
+      <text>课程名称：{{taskList.taskClass}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      <text>开始时间：{{taskList.taskStart}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      <text>结束时间：{{taskList.taskEnd}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      <text>签到地点：{{taskList.taskAddress}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      <text>发布：{{taskList.taskCreator}}</text>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{status == 1}}" class="padding flex flex-direction">
+  <button bindtap="{{getLocation}}" class="cu-btn bg-red margin-tb-sm lg">点击签到</button>
+  <text style="margin:0 auto;font-size:40rpx;" wx:if="{{signStatus}}">当前位置距离签到地点{{distance}}公里</text>
+</view>
+
+<view wx:if="{{status == 0}}" class="cu-list menu">
+  <view class="cu-item">
+    <view class="content">
+      <text>已签到人数:{{studentList.length}}</text>
+    </view>
+  </view>
+</view>
+  <view wx:for="{{studentList}}" wx:key="this" class="cu-list menu" wx:if="{{status == 0}}">
+    <view class="cu-item">
+      <view class="content">
+        <text>签到人员:{{item.recordStudent}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        <text>签到时间:{{item.recordDate}}</text>
+      </view>
+    </view>
+  </view>
+

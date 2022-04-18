@@ -1,0 +1,4 @@
+.myItem{
+  display: flex;
+  justify-content: center;
+}

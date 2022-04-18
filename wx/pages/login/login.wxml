@@ -1,0 +1,16 @@
+<!--pages/login/login.wxml-->
+<view class="title">登录</view>
+<form bindsubmit="formSubmit">
+  <view class="content">
+    <view class="cu-form-group">
+      <input type="text" placeholder="请输入学号或工号" name="inputName" value="student"></input>
+    </view>
+    <view class="cu-form-group">
+      <input type="text" placeholder="请输入密码" name="inputPassword" value="123"></input>
+    </view>
+    <view class="userBtn">
+      <button class="loginBtn" form-type="submit">登录</button>
+    </view>
+  </view>
+</form>
+

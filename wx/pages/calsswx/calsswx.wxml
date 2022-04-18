@@ -1,0 +1,52 @@
+<!-- 星期 -->
+<view class="top">  
+    <view class="top-text">
+        <text>节\日</text>
+    </view>
+    <view class="top-text">
+        <text>一</text>
+    </view>
+    <view class="top-text">
+        <text>二</text>
+    </view>
+    <view class="top-text">
+        <text>三</text>
+    </view>
+    <view class="top-text">
+        <text>四</text>
+    </view>
+    <view class="top-text">
+        <text>五</text>
+    </view>
+    <view class="top-text">
+        <text>六</text>
+    </view>
+    <view class="top-text">
+        <text>日</text>
+    </view>
+</view>
+<!-- 课程 -->
+<view class="cont">
+    <view class="cont-left">
+        <view class="left"> 1 </view>
+        <view class="left"> 2 </view>
+        <view class="left"> 3 </view>
+        <view class="left"> 4 </view>
+        <view class="left"> 5 </view>
+        <view class="left"> 6 </view>
+        <view class="left"> 7 </view>
+        <view class="left"> 8 </view>
+    </view>
+    <view class="cont-right">
+      <view style="margin-top:{{(item.classPitchnum-1)*120+5}}rpx;height:{{(item.classPitchnum2)*120}}rpx;background-color:{{colorArrays[index%9]}};margin-left:{{(item.classXq-1)*100}}rpx" wx:for="{{classList}}" wx:key="index" data-item="{{item}}" class="right" bindtap="onClass">
+            <view class="flex-item">
+                <text>{{item.className}}</text>
+                <text>{{item.classAddress}}</text>
+            </view>
+      </view>
+    </view>
+</view>
+<view class="bottom">
+    ————<text>读万卷书 行万里路</text>————
+</view>
+

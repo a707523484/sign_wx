@@ -1,0 +1,13 @@
+/* pages/signTask/signTask.wxss */
+input {
+  background-color: gray;
+}
+
+.textItem{
+  display: flex;
+}
+
+.textItem textarea{
+  flex:1;
+  height: 100rpx;
+}

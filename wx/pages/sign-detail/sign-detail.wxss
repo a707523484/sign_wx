@@ -1,0 +1,10 @@
+.taskList{
+  display: flex;
+  flex-direction: column;
+}
+.studentList{
+  display: flex;
+  flex-direction: column;
+  background: bisque;
+  border-radius: 25rpx;
+}

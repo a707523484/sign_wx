@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/calsswx/calsswx",
+    "pages/my/my",
+    "pages/classwx-detail/classwx-detail",
+    "pages/signTask/signTask",
+    "pages/sign-detail/sign-detail"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/image/index.png",
+        "selectedIconPath": "pages/image/index-fill.png"
+      },
+      {
+        "pagePath": "pages/calsswx/calsswx",
+        "text": "课程表",
+        "iconPath": "pages/image/class.png",
+        "selectedIconPath": "pages/image/class-fill.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "pages/image/my.png",
+        "selectedIconPath": "pages/image/my-fill.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "请点击确定"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

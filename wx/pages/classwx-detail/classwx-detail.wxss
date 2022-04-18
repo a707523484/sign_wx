@@ -1,0 +1,24 @@
+.inputItem{
+  display: flex;
+}
+
+.input{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inputItem input{
+  width: 150px;
+}
+
+.taskList{
+  display: flex;
+  flex-wrap: wrap;
+  background: bisque;
+  border-radius: 25rpx;
+  flex-direction: column;
+  height: 300rpx;
+  justify-content: center;
+  margin-top: 20rpx;
+}

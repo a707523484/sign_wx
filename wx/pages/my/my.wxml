@@ -1,0 +1,22 @@
+
+<view class="myItem" style="margin-top:10px">
+  <view class="cu-avatar xl round margin-left bg-red">
+    <text class="avatar-text">{{userName}}</text>
+  </view>
+</view>
+
+<view class="cu-list menu" style="margin-top:10px">
+  <view class="cu-item">
+    <view class="content">
+      <text>用户名:{{userName}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      <text>用户组:{{call}}</text>
+    </view>
+  </view>
+</view>
+<view class="myItem">
+  <button bindtap="exit" class="cu-btn bg-red margin-tb-sm lg">退出登录</button>
+</view>

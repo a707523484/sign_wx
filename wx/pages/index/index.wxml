@@ -1,0 +1,23 @@
+
+<view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="solid-bottom text-lg padding">欢迎{{name}}{{call}}</text>
+    </view>
+</view>
+<swiper class="screen-swiper round-dot" duration="500" interval="5000" autoplay="true" style="margin-top: 10px;">
+  <swiper-item>
+    <image src="http://www.hziee.edu.cn/uploadfile/linklogo/2022-01-31/61f748a2408e6.jpg" mode="aspectFill"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="http://www.hziee.edu.cn/uploadfile/linklogo/2022-01-31/61f74920d8e27.png" mode="aspectFill"></image>
+  </swiper-item>
+</swiper>
+
+<view class="cu-list grid col-2 no-border" style="margin-top:10px">
+  <view class="cu-item">
+  <text>距学期结束还有：{{date1}}天</text>
+  </view>
+  <view class="cu-item">
+  <text>距考研还有：{{date2}}天</text>
+  </view>
+</view>
