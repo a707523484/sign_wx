@@ -58,4 +58,10 @@ public class SignController {
     public List<Record> getRecord(String recordClass,String recordTeacher,String recordAddress){
         return userService.getRecord(recordClass,recordTeacher,recordAddress);
     }
+
+
+    @RequestMapping("/getRecordByName")
+    public List<Record> getRecord(String recordStudent,String recordAddress){
+        return userService.getRecordByName(recordStudent,recordAddress);
+    }
 }

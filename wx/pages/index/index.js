@@ -17,16 +17,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    if (this.data.auth==1) {
-      this.setData({
-        call:'老师'
-      })
-    }
-    else{
-      this.setData({
-        call:'同学'
-      })
-    }
     this.setData({
       date1:dateDiff(formatTime_8(new Date()),'2022-06-20'),
       date2:dateDiff(formatTime_8(new Date()),'2022-12-24')

@@ -37,4 +37,7 @@ public interface UserMapper {
 
     @Select("select * from record where record_class = #{recordClass} and record_teacher=#{recordTeacher} and record_address=#{recordAddress}")
     List<Record> getRecord(String recordClass,String recordTeacher,String recordAddress);
+
+    @Select("select * from record where record_student = #{recordStudent} and record_address=#{recordAddress}")
+    List<Record> getRecordByName(String recordStudent,String recordAddress);
 }

@@ -49,4 +49,8 @@ public class UserService {
     public List<Record> getRecord(String recordClass,String recordTeacher,String recordAddress){
         return userMapper.getRecord(recordClass,recordTeacher,recordAddress);
     }
+
+    public List<Record> getRecordByName(String recordStudent,String recordAddress){
+        return userMapper.getRecordByName(recordStudent,recordAddress);
+    }
 }

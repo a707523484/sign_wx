@@ -1,7 +1,7 @@
 
 <view class="cu-bar bg-white solid-bottom margin-top">
     <view class="action">
-      <text class="solid-bottom text-lg padding">欢迎{{name}}{{call}}</text>
+      <text class="solid-bottom text-lg padding">欢迎{{name}}</text>
     </view>
 </view>
 <swiper class="screen-swiper round-dot" duration="500" interval="5000" autoplay="true" style="margin-top: 10px;">

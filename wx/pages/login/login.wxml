@@ -6,7 +6,7 @@
       <input type="text" placeholder="请输入学号或工号" name="inputName" value="student"></input>
     </view>
     <view class="cu-form-group">
-      <input type="text" placeholder="请输入密码" name="inputPassword" value="123"></input>
+      <input type="text" placeholder="请输入密码" name="inputPassword" value="123" type="password"></input>
     </view>
     <view class="userBtn">
       <button class="loginBtn" form-type="submit">登录</button>

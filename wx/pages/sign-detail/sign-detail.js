@@ -18,6 +18,7 @@ Page({
       console.log(s);
       return s
     },
+    
     getDistanceRes(){
       let res=this.getDistance(this.data.taskList.taskAddressX,this.data.taskList.taskAddressY,this.data.latitude,this.data.longitude)
       this.setData({
@@ -35,21 +36,35 @@ Page({
       }
       else if(res<12){
         wx.request({
-          url: 'http://127.0.0.1:8080/addRecord?recordStudent='+this.data.name+
-          '&recordDate='+formatTime(new Date())+'&recordClass='+
-          this.data.taskList.taskClass+'&recordTeacher='+
-          this.data.taskList.taskCreator+'&recordAddress='+this.data.taskList.taskAddress,
-          success:()=>{
-            wx.showToast({
-              title: '签到成功',
-              icon:'success',
-              duration:2000 
-            })
-            this.setData({
-              signStatus:true,
-              getLocation:'getLocationed'
-            })
-          }
+          url: 'http://127.0.0.1:8080/getRecordByName?recordStudent='+this.data.name+'&recordAddress='+this.data.taskList.taskAddress,
+          success:(res)=>{
+            if (res.data.length !== 0) {
+              wx.showToast({
+                title: '请勿重复签到',
+                icon:'error',
+                duration:2000
+              })
+            }
+            else{
+              wx.request({
+                url: 'http://127.0.0.1:8080/addRecord?recordStudent='+this.data.name+
+                '&recordDate='+formatTime(new Date())+'&recordClass='+
+                this.data.taskList.taskClass+'&recordTeacher='+
+                this.data.taskList.taskCreator+'&recordAddress='+this.data.taskList.taskAddress,
+                success:()=>{
+                  wx.showToast({
+                    title: '签到成功',
+                    icon:'success',
+                    duration:2000 
+                  })
+                  this.setData({
+                    signStatus:true,
+                    getLocation:'getLocationed'
+                  })
+                }
+              })
+            }
+          },
         })
       }
     },

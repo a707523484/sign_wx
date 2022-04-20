@@ -3,6 +3,14 @@ Page({
   exit(){
     wx.navigateTo({
       url: '../login/login',
+      success:()=>{
+        wx.removeStorage({
+          key: 'userStatus',
+          success:()=>{
+            console.log("移除缓存");
+          }
+        })
+      }
     })
   },
 
@@ -26,18 +34,18 @@ Page({
           userName:res.data[0].userName,
           userStatus:res.data[0].userStatus
         })
+        if (this.data.userStatus==1) {
+          this.setData({
+            call:'学生'
+          })
+        }
+        else{
+          this.setData({
+            call:'老师'
+          })
+        }
       }
     })
-    if (this.data.userStatus==1) {
-      this.setData({
-        call:'老师'
-      })
-    }
-    else{
-      this.setData({
-        call:'学生'
-      })
-    }
   },
 
   /**
